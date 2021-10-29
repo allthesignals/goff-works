@@ -14,24 +14,26 @@
       <marker.popup
         class="location-popup"
       >
-        <a
-          href="/images/locations/{{location.id}}.jpg"
-          target="_blank" rel="noopener noreferrer"
-        >
-          <img
-            src="/images/locations/{{location.id}}.jpg"
-            class="popup-image"
-          />
-        </a>
-        <h2>{{location.Title}}</h2>
-        <p>{{location.Description}}</p>
-        <p>
+        <div class="popup-container">
           <a
-            href="https://www.google.com/maps?q={{location.Latitude}},{{location.Longitude}}"
+            href="/images/locations/{{location.id}}.jpg"
             target="_blank" rel="noopener noreferrer"
           >
-            Google Maps >></a>
-        </p>
+            <img
+              src="/images/locations/{{location.id}}.jpg"
+              class="popup-image"
+            />
+          </a>
+          <h2>{{location.Title}}</h2>
+          <p>{{location.Description}}</p>
+          <p>
+            <a
+              href="https://www.google.com/maps?q={{location.address}}"
+              target="_blank" rel="noopener noreferrer"
+            >
+              Google Maps >></a>
+          </p>
+        </div>
       </marker.popup>
     </map.marker>
   {{/each}}

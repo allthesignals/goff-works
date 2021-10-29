@@ -2,7 +2,7 @@ import Route from '@ember/routing/route';
 import { csv } from 'd3-fetch';
 
 const GOOGLE_SHEET_URL =
-  'https://docs.google.com/spreadsheets/d/e/2PACX-1vS_1zhA83J62qN3aVpKKTYmmXSdJ6AWWqXAlRC7T-eUtwBnbS_4RhugdIH5kz3Gw8NN8ZBkH5EnZJZO/pub?gid=0&single=true&output=csv';
+  'https://docs.google.com/spreadsheets/d/e/2PACX-1vS_1zhA83J62qN3aVpKKTYmmXSdJ6AWWqXAlRC7T-eUtwBnbS_4RhugdIH5kz3Gw8NN8ZBkH5EnZJZO/pub?gid=0&single=true&output=csv&random=1';
 
 export default class ApplicationRoute extends Route {
   model() {
