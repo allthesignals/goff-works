@@ -1,7 +1,18 @@
 {{page-title "GoffWorks"}}
 
-{{!-- The following component displays Ember's default welcome message. --}}
-<WelcomePage />
-{{!-- Feel free to remove this! --}}
+<MapboxGl
+  @initOptions={{hash hash=true}}
+  class='map-container' as |map|
+>
+  {{#each this.model as |location|}}
+    <map.marker
+      @lngLat={{array location.Longitude location.Latitude}}
+    >
+      <a href="https://www.google.com/maps?q={{location.Latitude}},{{location.Longitude}}" target="_blank">
+        <img class="goff-logo" src="/images/goff-logo.png"/>
+      </a>
+    </map.marker>
+  {{/each}}
+</MapboxGl>
 
 {{outlet}}
