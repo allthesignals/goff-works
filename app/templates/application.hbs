@@ -1,4 +1,4 @@
-{{page-title "GoffWorks"}}
+{{page-title "Goff-Fest 2021"}}
 
 <MapboxGl
   @initOptions={{hash hash=true}}
@@ -7,10 +7,32 @@
   {{#each this.model as |location|}}
     <map.marker
       @lngLat={{array location.Longitude location.Latitude}}
+      as |marker|
     >
-      <a href="https://www.google.com/maps?q={{location.Latitude}},{{location.Longitude}}" target="_blank">
-        <img class="goff-logo" src="/images/goff-logo.png"/>
-      </a>
+      <img class="goff-logo" src="/images/goff-logo.png"/>
+
+      <marker.popup
+        class="location-popup"
+      >
+        <a
+          href="/images/locations/{{location.id}}.jpg"
+          target="_blank"
+        >
+          <img
+            src="/images/locations/{{location.id}}.jpg"
+            class="popup-image"
+          />
+        </a>
+        <h2>{{location.Title}}</h2>
+        <p>{{location.Description}}</p>
+        <p>
+          <a
+            href="https://www.google.com/maps?q={{location.Latitude}},{{location.Longitude}}"
+            target="_blank"
+          >
+            Google Maps >></a>
+        </p>
+      </marker.popup>
     </map.marker>
   {{/each}}
 </MapboxGl>
