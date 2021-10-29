@@ -9,14 +9,14 @@
       @lngLat={{array location.Longitude location.Latitude}}
       as |marker|
     >
-      <img class="goff-logo" src="/images/goff-logo.png"/>
+      <img class="goff-logo" src="/images/pin.png"/>
 
       <marker.popup
         class="location-popup"
       >
         <a
           href="/images/locations/{{location.id}}.jpg"
-          target="_blank"
+          target="_blank" rel="noopener noreferrer"
         >
           <img
             src="/images/locations/{{location.id}}.jpg"
@@ -28,7 +28,7 @@
         <p>
           <a
             href="https://www.google.com/maps?q={{location.Latitude}},{{location.Longitude}}"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
           >
             Google Maps >></a>
         </p>
@@ -36,5 +36,7 @@
     </map.marker>
   {{/each}}
 </MapboxGl>
+
+<img src="/images/root-logo.png" class="root-logo mapboxgl-ctrl" />
 
 {{outlet}}
