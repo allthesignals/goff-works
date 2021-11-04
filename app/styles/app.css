@@ -11,10 +11,19 @@ html, body {
   width: 100%;
 }
 
-.goff-logo {
+.goff-pin {
   width: 25px;
   height: 50px;
   cursor: pointer;
+}
+
+.goff-logo {
+  position: absolute;
+  margin: 1rem;
+  z-index: 50;
+  background-color: white;
+  width: 75px;
+  opacity: 0.90;
 }
 
 .popup-image {
@@ -25,22 +34,39 @@ html, body {
   padding: 15px;
 }
 
-.root-logo {
+.logos {
   position: absolute;
   bottom: 0;
   right: 0;
   padding: 0;
   margin: 10px;
-  width: calc(100vh/20);
+}
+
+.root-logo {
+  width: 50px;
   pointer-events: none;
   background-color: white;
   border-radius: 50%;
   z-index: 100;
 }
 
+.taf-logo {
+  height: 40px;
+  background-color: #313639;
+  padding: 5px;
+  margin: 0;
+}
+
 @media (max-width: 650px) {
-  .root-logo {
+  .logos {
     right: 28px;
-    width: 24px;
+  }
+
+  .root-logo {
+    width: 25px;
+  }
+
+  .taf-logo {
+    height: 25px;
   }
 }

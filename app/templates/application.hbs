@@ -1,5 +1,9 @@
 {{page-title "Goff-Fest 2021"}}
 
+<a href="http://goff-fest.com" target="_blank">
+  <img src="/images/goff-logo-1.png" class="goff-logo" />
+</a>
+
 <MapboxGl
   @initOptions={{hash hash=true}}
   class='map-container' as |map|
@@ -9,7 +13,7 @@
       @lngLat={{array location.Longitude location.Latitude}}
       as |marker|
     >
-      <img class="goff-logo" src="/images/pin.png"/>
+      <img class="goff-pin" src="/images/pin.png"/>
 
       <marker.popup
         class="location-popup"
@@ -39,6 +43,9 @@
   {{/each}}
 </MapboxGl>
 
-<img src="/images/root-logo.png" class="root-logo mapboxgl-ctrl" />
+<div class="logos">
+  <img src="/images/taf-logo.png" class="taf-logo mapboxgl-ctrl" />
+  <img src="/images/root-logo.png" class="root-logo mapboxgl-ctrl" />
+</div>
 
 {{outlet}}
